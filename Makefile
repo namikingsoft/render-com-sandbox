@@ -1,6 +1,8 @@
 .PHONY: all
 all: dist/index.html
 
+CONTENT ?= "Hello"
+
 dist/index.html:
 	mkdir -p dist
-	echo Hello > dist/index.html
+	echo $(CONTENT) > dist/index.html
